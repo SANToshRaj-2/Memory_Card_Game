@@ -1,0 +1,153 @@
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing : border-box;
+}
+
+html {
+    font-family:sans-serif ;
+    font-size : 62.5%;
+}
+
+@media screen and (max-width : 700px){
+    html {
+        font-size :48.5%;
+    }
+}
+
+@media screen and (max-width : 500px){
+    html {
+        font-size :28.5%;
+    }
+}
+
+@media screen and (max-width : 470px){
+    html {
+        font-size :31.5%;
+    }
+}
+
+body {
+    margin :0;
+    font-family:sans-serif ;
+
+}
+
+#main-container {
+    height:100vh;
+    background-image: linear-gradient(60deg, #00BCD4, #010e56);
+    display:flex;
+    justify-content :center;
+    align-items : center;
+}
+
+#card-frame {
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+   /* background-color:rgb(38, 0, 255);
+    border :5px solid transparent;
+     box-shadow: 0px 5px 8px 3px #181818;
+    border-image:linear-gradient(30deg, #00ff1f,#03A9F4) 1;*/
+    width:70rem;
+    height:90%;
+    margin:0 3rem;
+    perspective:1000px;
+}
+
+@media screen and (max-width : 700px){
+    #card-frame {
+    width: 86rem;
+    height: 91%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #card-frame {
+    width: 100rem;
+    height: 89%;
+    }
+   
+
+}
+
+@media screen and (max-width: 470px) {
+    #card-frame {
+    width: 80rem;
+    height: 80%;
+    }
+    .card {
+    width:30.5%;
+    height:26rem;
+    font-size: 22rem;
+    }
+
+}
+
+
+.card {    
+    margin:5px;
+    width:23.5%;
+    height: 27rem;
+    font-size: 20rem;
+    text-align: center;
+    position : relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+.card:active{
+    transform:scale(0.96);
+}
+
+.card.FLIP{
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width : 700px){
+    .card {
+        height:33rem;
+    }
+}
+@media screen and (max-width : 500px){
+    .card {
+        width:30.5%;
+        height:33rem;
+        font-size: 22rem;
+        }
+
+}
+@media screen and (max-width: 470px) {
+    .card {
+    height:27rem;
+    font-size: 22rem;
+    }
+
+}
+
+
+.card-front-face,
+.card-back-face {
+    width :100%;
+    height:100%;
+    position:absolute;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    transition: transform 1s ease-in-out;
+}
+.card-back-face{
+    background-color: yellow;    
+}
+
+.card-front-face {
+    background-color: tomato;
+    transform:rotateY(180deg); 
+}
+
+
+
+
+
+
+
